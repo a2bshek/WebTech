@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Factorial</title>
+        <link rel="stylesheet" type="text/css" href="dark.css">
+    </head>
+    <body>
+        <nav>
+            <label class="logo">
+                Javascript - Factorial
+            </label>
+            <ul>
+                <li><a class="active" href="fact.html">Factorial</a></li>
+                <li><a href="fibo.html">Fibonacci</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <input id="num" class="inp"><br><br><br>
+            <button onclick="show()" class="show">Get Factorial</button><br><br><br>
+            <input id="answer" class="ans">
+        </div>
+
+
+        <script>
+            function show()
+            {
+                var i, no, fact;
+                fact=1;
+                no=Number(document.getElementById("num").value);
+                for(i=1; i<=no; i++)  
+                {
+                    fact= fact*i;
+                }  
+                document.getElementById("answer").value= fact;
+            }
+        </script>
+    </body>
+</html>

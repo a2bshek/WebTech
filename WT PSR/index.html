@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Quiz App</title>
+	</head>
+
+	<body>
+		<div class="container box-shadow">
+			<div id="select"></div>
+			
+			<div id="theForm">
+				<form class="form" onsubmit="return false;">
+					
+					<button type="submit" class="btn btn-primary mb-2 custom1" id="submit" onclick="startQuiz('totQHtml');" >
+						HTML
+					</button>
+					
+					<button type="submit" class="btn btn-primary mb-2 custom3" id="submit" onclick="startQuiz('totQJs');" >
+						JAVASCRIPT
+					</button>
+					
+					<button type="submit" class="btn btn-primary mb-2 custom2" id="submit" onclick="startQuiz('totQCss');" >
+						CSS
+					</button>
+				</form>
+			</div>
+
+			<section id="theQuiz">
+				<form id="quizForm" onsubmit="return false;">
+					<h2>Question:</h2>
+
+					<div id="steps" style="text-align:center;">
+					</div>
+					<hr />
+					
+					<div id="tab">
+						<p id="que"></p>
+						<div class="custom-control custom-radio">
+							<input type="radio" id="opt1" name="q" class="custom-control-input" onclick="enableBtn(this)" value="1" />
+							<label class="custom-control-label" onclick="var 
+							id = this.previousElementSibling.id; this.setAttribute('for', id)" ></label>
+						</div>
+						<div class="custom-control custom-radio">
+							<input type="radio" id="opt2" name="q"
+								class="custom-control-input" onclick="enableBtn(this)" value="2" />
+							<label class="custom-control-label" onclick="var 
+							id = this.previousElementSibling.id; this.setAttribute('for', id)"></label>
+						</div>
+						<div class="custom-control custom-radio">
+							<input type="radio" id="opt3" name="q" class="custom-control-input" onclick="enableBtn(this)" value="3"/>
+							<label class="custom-control-label" onclick="var 
+							id = this.previousElementSibling.id; this.setAttribute('for', id)"></label>
+						</div>
+						<div class="custom-control custom-radio">
+							<input type="radio" id="opt4" name="q" class="custom-control-input" onclick="enableBtn(this)" value="4"/>
+							<label class="custom-control-label" onclick="var 
+							id = this.previousElementSibling.id; this.setAttribute('for', id)"></label>
+						</div>
+					</div>
+
+					<div style="overflow:auto;">
+						<div style="float:right;">
+							<button type="button" disabled="disabled" class="btn btn-info mb-2" id="next-button" onclick="next();">
+								Next
+							</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<section id="theResult">
+				<div id="resultCircle"> </div>
+				<br>
+				<h2 id="resultFb" style="font-weight: bold;"></h2>
+				<h3 id="correctAns"></h3>
+				<hr />
+				<button class="btn btn-info" onclick="retakeQuiz();">
+					Retake Quiz
+				</button>
+			</section>
+		</div>
+
+		<script id="qns" src="./jsqns.js"></script>
+		<script id="qns" src="./htmlqns.js"></script>
+		<script id="qns" src="./cssqns.js"></script>
+		<script src="./script.js"></script>
+		<script>
+			var file=document.getElementById('qns');
+			
+		</script>
+	</body>
+</html>

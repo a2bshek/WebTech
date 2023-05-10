@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="dark.css">
+    </head>
+    <body>
+        <nav>
+            <label class="logo">
+                Javascript - Calculator
+            </label>
+            <ul>
+                <li><a href="fact.html">Factorial</a></li>
+                <li><a href="fibo.html">Fibonacci</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a class="active" href="calculator.html">Calculator</a></li>
+                <li><a></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <form name = "form1">
+                <input id="calc" type="text" name="answer" class="inp">
+                <br><br>
+                <input type="button" value="1" onclick="form1.answer.value+='1' " class="calcbtn">  
+                <input type="button" value="2" onclick="form1.answer.value+='2' " class="calcbtn">  
+                <input type="button" value="3" onclick="form1.answer.value+='3' " class="calcbtn">  
+                <input type="button" value="+" onclick="form1.answer.value+='+' " class="calcbtn">
+                <br>
+                <input type="button" value="4" onclick="form1.answer.value+='4' " class="calcbtn">
+                <input type="button" value="5" onclick="form1.answer.value+='5' " class="calcbtn">
+                <input type="button" value="6" onclick="form1.answer.value+='6' " class="calcbtn">
+                <input type="button" value="-" onclick="form1.answer.value+='-' " class="calcbtn">
+                <br>
+                <input type="button" value="7" onclick="form1.answer.value+='7' " class="calcbtn">
+                <input type="button" value="8" onclick="form1.answer.value+='8' " class="calcbtn">
+                <input type="button" value="9" onclick="form1.answer.value+='9' " class="calcbtn">
+                <input type="button" value="*" onclick="form1.answer.value+='*' " class="calcbtn">
+                <br>
+                <input type="button" value="/" onclick="form1.answer.value+='/' " class="calcbtn">
+                <input type="button" value="0" onclick="form1.answer.value+='0' " class="calcbtn">
+                <input type="button" value="." onclick="form1.answer.value+='.' " class="calcbtn">
+                <input type="button" value="=" onclick="form1.answer.value=eval(form1.answer.value)"  class="calcbtn">  
+                <br>
+                <input type="button" value="Clear" onclick="form1.answer.value=' ' " id="clear"  class="calcbtn"> 
+            </form> 
+        </div>
+    </body>
+</html>

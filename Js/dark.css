@@ -1,0 +1,155 @@
+body
+{
+background-color: #000;
+font-family: sans-serif;
+color: #FFF;
+}
+nav .logo
+{
+line-height: 70px;
+padding-left: 110px;
+font-size: 30px;
+}
+nav
+{
+height: 70px;
+background: #555555;
+box-shadow: 0 3px 15px #000;
+}
+nav ul
+{
+float: right;
+margin-right: 30px;
+}
+nav ul li
+{
+display: inline-block;
+}
+nav ul li a
+{
+color: white;
+display: block;
+padding: 0 15px;
+line-height: 70px;
+font-size: 18px;
+background: #555555;
+transition: .5s;
+}
+nav ul li a:hover, nav ul li a.active
+{
+color: #2391db;
+}
+nav ul ul
+{
+position: absolute;
+top: 85px;
+border-top: 3px solid #2391db;
+opacity: 0;
+}
+nav ul li:hover > ul
+{
+top: 70px;
+opacity: 1;
+visibility: visible;
+transition: .3s linear;
+}
+nav ul ul li
+{
+width: 250px;
+display: list-item;
+position: relative;
+border: 2px solid #555555;
+border-top: none;
+}
+nav ul ul li a
+{
+line-height: 50px;
+}
+h1,p
+{
+text-align: center;
+}
+.button
+{
+border: none;
+padding: 7px 50px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 40x 40px;
+cursor: pointer;
+border-radius: 50px 50px 50px 50px;
+}
+.button1
+{
+background-color: #e7e7e7;
+color: black;
+}
+.button2
+{
+background-color: #555555;
+color: white;
+}
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+.container
+{
+text-align: center;
+align-items: center;
+position: absolute;
+width: 30%;
+left: 35%;
+padding-top:200px;
+}
+.ans
+{
+background-color: #3CBC8D;
+color: white;
+height: 35px;
+font-size: 20px;
+text-align: center;
+}
+.inp
+{
+background-color: #FFF;
+color: #000;
+height: 35px;
+font-size: 20px;
+text-align: center;
+}
+.show
+{
+background-color: #FFFFFF;
+border-radius: 40px;
+box-shadow: #ADCFFF 0 -12px 6px inset;
+color: #000000;
+cursor: pointer;
+font-size: 20px;
+text-align: center;
+touch-action: manipulation;
+padding: 10px;
+}
+.show:hover
+{
+background-color: #FFC229;
+box-shadow: #FF6314 0 -6px 8px inset;
+}
+.calcbtn
+{
+background-color: #008cff;
+border: none;
+color: white;
+padding: 15px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 50%;
+}

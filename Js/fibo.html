@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fibonacci</title>
+        <link rel="stylesheet" type="text/css" href="dark.css">
+    </head>
+    <body>
+        <nav>
+            <label class="logo">
+                Javascript - Fibonacci
+            </label>
+            <ul>
+                <li><a href="fact.html">Factorial</a></li>
+                <li><a class="active" href="fibo.html">Fibonacci</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <input id="number" class="inp"><br><br><br>
+            <button onclick="fibonacci()" class="show">Get Fibonacci</button><br><br><br>
+            <p id="output" class="ans"></p>
+        </div>
+        <script type="text/javascript">
+            function fibonacci()
+            {
+                var n,i,c;
+                n = parseInt(document.getElementById ("number").value);
+                var a = 0;
+                var b = 1;
+                var d ="";
+                for(i = 2; i < n; i++ )
+                {
+                    c = a +b;
+                    a = b;
+                    b = c;
+                    d+=" "+c+" ";
+                }
+                console.log(d);
+                document.getElementById('output').innerHTML = d;
+            }
+            
+        </script>
+    </body>
+</html>

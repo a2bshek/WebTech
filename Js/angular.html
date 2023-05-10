@@ -1,0 +1,52 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Employee id</title>
+        <link rel="stylesheet" type="text/css" href="dark.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <label class="logo">
+                Angular JS
+            </label>
+            <ul>
+                <li><a class="active" href="#">Employee Details</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div ng-app="emp" ng-controller="empc" ng-init="col='com';detail=true;inp='in'">
+                <ng-form ng-class="col" >
+                    <input type="text" ng-class="inp" ng-model="id" ng-show="detail" class="inp"><br><br>
+                    <input type="submit" value="Detail" ng-click="tab()" ng-show="detail" class="show">
+                    
+                    <table ng-hide="detail" border="2">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Experiance</th>
+                        </tr>
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>Abishek</td>
+                            <td>Network Security Engineer</td>
+                            <td>3 Years</td>
+                        </tr>
+                    </table>
+                </ng-form>
+            </div>
+        </div>
+        <script>
+            var app=angular.module("emp",[]);
+            app.controller("empc",function($scope)
+            {
+                $scope.tab=function()
+                {
+                    $scope.detail=false;
+                }
+            })
+        </script>
+    </body>
+</html>
